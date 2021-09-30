@@ -19,11 +19,11 @@ const chalk = require("chalk");
 let user = {};
 
 passport.serializeUser((user, cb) => {
-    cb(null, user);
+    cb(null, user.id);
 });
 
 passport.deserializeUser((user, cb) => {
-    cb(null, user);
+    cb(null, user)
 });
 
 // Facebook Strategy
